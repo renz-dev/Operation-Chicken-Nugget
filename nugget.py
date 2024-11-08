@@ -100,6 +100,13 @@ while True:
     #assign new cart to current user
     client.post("/order/cart/{0}/assign".format(cart.get("cartId")))
     #putting KS-A into cart
+    # Flash Sales planCode
+    # KS-LE-A (25sklea01)
+    # KS-LE-B (25skleb01)
+    # KS-LE-C (25sklec01)
+    # KS-LE-D (25skled01)
+    # KS-LE-E (25sklee01)
+    # KS-A (22sk010)
     #result = client.post(f'/order/cart/{cart.get("cartId")}/eco',{"duration":"P1M","planCode":"22sk010","pricingMode":"default","quantity":1})
     #apparently this shit sends malformed json whatever baguette
     payload = {'duration':'P1M','planCode':planConfig['planCode'],'pricingMode':'default','quantity':1}
